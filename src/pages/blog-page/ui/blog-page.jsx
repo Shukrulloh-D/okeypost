@@ -1,6 +1,8 @@
 import { mockBlog } from '@/shared/mock/data';
 import { BlogCard } from '@/entities/blog-card';
+
 export default function BlogPage() {
+  
   return (
     <div className="container page-wrapper">
       <div className="bg-blue-gradient mb-8" style={{ padding: '30px 40px' }}><h1 style={{ fontSize: '28px' }}>Блог</h1></div>

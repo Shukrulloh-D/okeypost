@@ -1,2 +1,16 @@
-/* Стили для профиля */
- 
+.profile-top-bar { display: flex; justify-content: space-between; padding: 16px 32px; margin-bottom: 24px; }
+.top-info, .top-balance { display: flex; gap: 24px; align-items: center; font-size: 14px; font-weight: 500;}
+.top-info span, .top-balance span { display: flex; align-items: center; gap: 8px; }
+.pay-logos { display: flex; gap: 8px; }
+.pay-logos img { height: 24px; }
+.profile-nav { display: flex; gap: 32px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+.profile-nav a { color: var(--text-muted); font-size: 15px; font-weight: 500; padding-bottom: 16px; }
+.profile-nav a.active { color: var(--primary-green); border-bottom: 2px solid var(--primary-green); }
+.user-card { background: #fff; }
+.user-avatar { width: 150px; height: 150px; border-radius: 12px; overflow: hidden; flex-shrink: 0;}
+.user-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.user-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; flex: 1; font-size: 14px;}
+.user-actions { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; }
+.profile-tabs { display: flex; gap: 32px; padding: 0 32px; border-bottom: 1px solid var(--border); }
+.profile-tabs a { padding: 24px 0; font-size: 15px; font-weight: 500; color: var(--text-muted); border-bottom: 2px solid transparent; }
+.profile-tabs a.active { color: var(--primary-green); border-bottom-color: var(--primary-green); }

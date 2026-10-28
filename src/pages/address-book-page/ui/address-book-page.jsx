@@ -1,22 +1,39 @@
+import { useForm } from 'react-hook-form';
 import { Input } from '@/shared/ui/input';
 import { Button } from '@/shared/ui/button';
-import { useForm } from 'react-hook-form';
+import { useToastStore } from '@/shared/ui/toast';
+
 export default function AddressBookPage() {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
+  const addToast = useToastStore((s) => s.addToast);
+
+  const onSubmit = (data) => {
+    addToast(`Адрес для "${data.firstname} ${data.lastname}" сохранен!`, 'success');
+    reset();
+  };
+
   return (
-    <div className="container page-wrapper" style={{ maxWidth: '1000px' }}>
-      <h1 className="title-h1 mb-8">Адресная книга</h1>
-      <form onSubmit={handleSubmit(()=>alert('Сохранено'))} style={{ background: '#fff', padding: '32px', borderRadius: '16px', border: '1px solid var(--border)' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
-          <Input label="Фамилия" register={register('surname')} /><Input label="Имя" register={register('name')} />
-          <Input label="Область/регион" register={register('region')} /><Input label="Район" register={register('district')} />
-          <Input label="Город" register={register('city')} /><Input label="Улица" register={register('street')} />
-          <Input label="Дом" register={register('house')} /><Input label="Квартира" register={register('flat')} />
-          <Input label="Индекс" register={register('index')} /><Input label="Телефон" register={register('phone')} />
+    <div>
+      <h2 className="title-h2 mb-8">Адресная книга пользователя Dmitro Karlov</h2>
+      <form onSubmit={handleSubmit(onSubmit)} className="card">
+        <div className="grid-3">
+          <Input label="Фамилия*" register={register('lastname', { required: true })} />
+          <Input label="Имя*" register={register('firstname', { required: true })} />
+          <Input label="Страна*" register={register('country')} />
+          <Input label="Область*" register={register('region')} />
+          <Input label="Район*" register={register('district')} />
+          <Input label="Город*" register={register('city')} />
+          <Input label="Улица*" register={register('street')} />
+          <Input label="Дом*" register={register('house')} />
+          <Input label="Квартира*" register={register('flat')} />
+          <Input label="Индекс*" register={register('index')} />
+          <Input label="Телефон*" register={register('phone')} />
         </div>
-        <Button type="submit" className="mt-8">Сохранить</Button>
+        <div className="flex gap-4 mt-6 items-center">
+          <Button type="submit">Сохранить</Button>
+          <a href="#" className="text-primary-blue font-medium text-sm">+ Добавить новый адрес</a>
+        </div>
       </form>
     </div>
   );
 }
- 

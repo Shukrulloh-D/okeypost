@@ -1,0 +1,6 @@
+.auth-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 20px;}
+.auth-modal { background: #fff; padding: 40px; border-radius: 16px; width: 100%; max-width: 480px; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+.close-btn { position: absolute; top: 20px; right: 20px; color: var(--text-muted); }
+.social-login { display: flex; justify-content: center; gap: 16px; }
+.soc-btn { width: 40px; height: 40px; border-radius: 50%; color: #fff; font-weight: bold; display: flex; align-items: center; justify-content: center; }
+.google { background: #DB4437; } .fb { background: #4267B2; } .vk { background: #4C75A3; }

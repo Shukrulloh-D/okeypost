@@ -1,12 +1,21 @@
 export default function InfoTab() {
   return (
-    <div>
-      <h3 className="mb-4">Информация о работе</h3>
-      <div style={{ display: 'grid', gap: '8px' }}>
-        <div style={{ display: 'flex', background: '#F5F7FA', padding: '12px 16px', borderRadius: 8, fontSize: 14 }}><span style={{ width: 200, color: 'var(--text-muted)' }}>Номер телефона:</span><span>+44 20 7946 0958</span></div>
-        <div style={{ display: 'flex', background: '#F5F7FA', padding: '12px 16px', borderRadius: 8, fontSize: 14 }}><span style={{ width: 200, color: 'var(--text-muted)' }}>E-mail:</span><span>dmitro.karlov@gmail.com</span></div>
-      </div>
+    <div style={{lineHeight: 1.8}}>
+      <h2 className="title-h2 mb-8">Информация по работе с сайтом</h2>
+      
+      <h3 className="font-bold text-lg mb-2">Как оформить заказ через нас</h3>
+      <ul className="list-disc pl-5 text-muted mb-8 text-sm space-y-2">
+        <li>В вашем личном кабинете есть кнопка оформить заказ, нажимая на нее вы переходите на форму оформления заказа, заполняете все поля (магазин, ссылка на страницу с товаром, название товара, цвет, размер, количество).</li>
+        <li>Если вы хотите заказать несколько товаров в одну форму - нажимайте кнопку добавить, измените на все и добавьте другие позиции по такой же логике.</li>
+        <li>После того как вы готовы оформить заказ, нажмите кнопку отправить, далее вы увидите список вашей посылки с общей суммой заказа, после этого вы уже выбираете все правильно, нажимаете кнопку подтвердить и мы начинаем оформлять ваш заказ.</li>
+      </ul>
+
+      <h3 className="font-bold text-lg mb-2">Оплата</h3>
+      <p className="text-muted mb-8 text-sm">В разделе "Посылки" есть кнопка сформировать посылку, при нажатии на нее вы сможете выбрать заказы, которые вы хотите отправить в конкретную посылку и выбрать способ доставки. Далее вам нужно оплатить посылку.</p>
+      
+      <h3 className="font-bold text-lg mb-2">Заказы</h3>
+      <p className="text-muted mb-4 text-sm">- В обработке - это заказы, отправленные вами.</p>
+      <p className="text-muted mb-4 text-sm">- Выкупленные заказы - заказы, уже выкупленные нами или ваши виртуальные заказы.</p>
     </div>
   );
 }
- 

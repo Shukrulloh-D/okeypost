@@ -1,29 +1,26 @@
 import { useForm } from 'react-hook-form';
+import { useState } from 'react';
 import { Button } from '@/shared/ui/button';
 import { Input } from '@/shared/ui/input';
-import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { SuccessModal } from '@/shared/ui/success-modal';
 
 export default function CreateSelfOrderPage() {
-  const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = (data) => { alert('Заказ сохранен: ' + data.track); };
- 
+  const [showSuccess, setShowSuccess] = useState(false);
+  const { register, handleSubmit } = useForm();
   return (
-    <div>
-      <Link to="/orders" className="flex items-center gap-2 text-muted mb-6 text-sm hover:text-primary-blue">
-        <ArrowLeft size={16}/> Назад к заказам
-      </Link>
-      <h2 className="title-h2 mb-2">Создание заказа, который Вы выполняете самостоятельно</h2>
-      <p className="text-muted text-sm mb-8">Заполните форму для добавления заказа в систему.</p>
-
-      <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-8 rounded-2xl">
-        <div className="grid-3">
-          <Input label="Трек-номер*" register={register('track', { required: 'Введите трек-номер' })} placeholder="UK123456" error={errors.track}/>
-          <Input label="Сумма заказа, £*" type="number" register={register('amount', { required: 'Введите сумму' })} placeholder="Введите сумму" error={errors.amount}/>
-          <Input label="Магазин*" register={register('shop', { required: 'Укажите магазин' })} placeholder="Введите магазин" error={errors.shop}/>
-        </div>
-        <Button type="submit" className="mt-6">Сохранить</Button>
-      </form>
-    </div>
+    <>
+      <div>
+        <h2 className="title-h2 mb-8">Создание заказа, который Вы выполняете самостоятельно</h2>
+        <form onSubmit={handleSubmit(() => setShowSuccess(true))} className="card">
+          <div className="grid-3">
+            <Input label="Трек-номер*" register={register('track', { required: true })} placeholder="UK123456" />
+            <Input label="Сумма заказа, £*" type="number" register={register('amount', { required: true })} placeholder="Введите сумму" />
+            <Input label="Магазин*" register={register('shop', { required: true })} placeholder="Введите магазин" />
+          </div>
+          <Button type="submit" className="mt-6">Сохранить</Button>
+        </form>
+      </div>
+      <SuccessModal isOpen={showSuccess} onClose={() => setShowSuccess(false)} title="Заказ добавлен!" message="Теперь он отображается в вашем списке заказов." />
+    </>
   );
 }

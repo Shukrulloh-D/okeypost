@@ -3,6 +3,7 @@
   --bg-main: #F5F7FA; --bg-card: #FFFFFF;
   --primary-blue: #40B8EA; --primary-purple: #5B52A3; --primary-green: #00B33B;
   --text-main: #1A1A1A; --text-muted: #8A8A8A; --border: #E0E0E0;
+  --shadow: 0 4px 16px rgba(0,0,0,0.04);
   --font: 'Inter', sans-serif;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -10,11 +11,94 @@ body { background: var(--bg-main); font-family: var(--font); color: var(--text-m
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 button { cursor: pointer; font-family: inherit; border: none; background: none; }
-.container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
-.page-wrapper { padding-top: 40px; padding-bottom: 80px; min-height: 70vh; }
-.title-h1 { font-size: 40px; font-weight: 700; line-height: 1.2; margin-bottom: 24px; }
-.title-h2 { font-size: 32px; font-weight: 700; line-height: 1.2; margin-bottom: 24px; }
-.text-muted { color: var(--text-muted); font-size: 15px; }
-.bg-blue-gradient { background: linear-gradient(90deg, #5B52A3, #40B8EA); color: #fff; border-radius: 24px; }
+.container { max-width: 1400px; margin: 0 auto; padding: 0 32px; }
+.page-wrapper { padding-top: 32px; padding-bottom: 80px; min-height: 70vh; }
+.title-h1 { font-size: 32px; font-weight: 700; line-height: 1.2; margin-bottom: 24px; }
+.title-h2 { font-size: 24px; font-weight: 700; line-height: 1.2; margin-bottom: 24px; }
+.text-muted { color: var(--text-muted); font-size: 14px; }
+.bg-blue-gradient { background: linear-gradient(90deg, #5B52A3, #40B8EA); color: #fff; border-radius: 16px; }
+.card { background: #fff; border-radius: 16px; padding: 32px; box-shadow: var(--shadow); border: 1px solid var(--border); }
 .mb-4 { margin-bottom: 16px; } .mb-8 { margin-bottom: 32px; } .mt-4 { margin-top: 16px; } .mt-8 { margin-top: 32px; }
- 
+.flex { display: flex; } .gap-4 { gap: 16px; } .items-center { align-items: center; } .justify-between { justify-content: space-between; }
+
+/* Универсальные инпуты */
+.input-group { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 6px; 
+  margin-bottom: 20px; 
+  width: 100%; 
+}
+
+.input-group label { 
+  font-size: 13px; 
+  font-weight: 600; 
+  color: #4B5563; /* Чуть темнее обычного серого для читаемости */
+  margin-left: 4px;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea { 
+  padding: 14px 16px; 
+  border: 1.5px solid #E5E7EB; /* Мягкая рамка */
+  border-radius: 10px; /* Чуть больше скругление */
+  font-size: 15px; 
+  outline: none; 
+  width: 100%; 
+  background: #F9FAFB; /* Легкий серый фон */
+  color: var(--text-main);
+  font-family: inherit;
+  transition: all 0.25s ease; /* Плавная анимация */
+}
+
+/* Подсказки внутри полей */
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: #9CA3AF;
+}
+
+/* При наведении */
+.input-group input:hover, 
+.input-group select:hover, 
+.input-group textarea:hover {
+  border-color: #D1D5DB;
+  background: #fff;
+}
+
+/* При фокусе (когда кликнули) */
+.input-group input:focus, 
+.input-group select:focus, 
+.input-group textarea:focus { 
+  border-color: var(--primary-blue); 
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(64, 184, 234, 0.15); /* Красивое голубое свечение */
+}
+
+/* Ошибка (красная рамка и фон) */
+.input-group input.error,
+.input-group textarea.error { 
+  border-color: #EF4444; 
+  background: #FEF2F2;
+}
+
+.input-group input.error:focus { 
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15); 
+}
+
+.error-text { 
+  color: #EF4444; 
+  font-size: 12px; 
+  margin-left: 4px;
+  margin-top: 2px;
+}
+/* Универсальные таблицы */
+.table-wrapper { background: #fff; border-radius: 16px; border: 1px solid var(--border); overflow-x: auto; box-shadow: var(--shadow); }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th { padding: 16px 24px; background: #F8FAFC; color: var(--text-muted); font-weight: 600; font-size: 12px; text-transform: uppercase; border-bottom: 1px solid var(--border); white-space: nowrap;}
+td { padding: 16px 24px; font-size: 14px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #F8FAFC; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+@media(max-width: 992px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } .flex { flex-direction: column; } }

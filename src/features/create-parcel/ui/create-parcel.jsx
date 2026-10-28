@@ -4,9 +4,16 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Input } from '@/shared/ui/input';
 import { Button } from '@/shared/ui/button';
 import { Select } from '@/shared/ui/select';
-const schema = z.object({ track: z.string().min(5, 'Мин 5 символов'), weight: z.string().min(1, 'Укажите вес'), desc: z.string().min(5, 'Мин 5 символов') });
-export const CreateParcel = () => {
+
+
+const schema = z.object({ track: z.string().min(5, 'Мин 5 символов'),
+  weight: z.string().min(1, 'Укажите вес'),
+  desc: z.string().min(5, 'Мин 5 символов') });
+
+  export const CreateParcel = () => {
+
   const { register, handleSubmit, formState: { errors } } = useForm({ resolver: zodResolver(schema) });
+  
   return (
     <form onSubmit={handleSubmit(() => alert('Посылка создана!'))}>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>

@@ -5,12 +5,17 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useAuthStore } from '@/shared/store/auth-store';
 import { Input } from '@/shared/ui/input';
 import { Button } from '@/shared/ui/button';
-const schema = z.object({ email: z.string().email('Неверный email'), password: z.string().min(6, 'Мин 6 символов') });
+
+
+const schema = z.object({ email: z.string().email('Неверный email'),
+  password: z.string().min(6, 'Мин 6 символов') });
+
 export const AuthForm = ({ isRegister }) => {
   const login = useAuthStore((s) => s.login);
   const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm({ resolver: zodResolver(schema) });
-  const onSubmit = (data) => { login({ name: 'Дмитрий', email: data.email }); navigate('/profile'); };
+  const onSubmit = (data) => { login({ name: 'Павел', email: data.email }); navigate('/profile'); };
+  
   return (
     <form onSubmit={handleSubmit(onSubmit)} style={{ background: '#fff', padding: '40px', borderRadius: '16px', maxWidth: '450px', margin: '0 auto', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
       <h2 className="title-h2 text-center mb-8">{isRegister ? 'Регистрация' : 'Вход в личный кабинет'}</h2>

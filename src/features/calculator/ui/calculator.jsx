@@ -3,9 +3,13 @@ import { useForm } from 'react-hook-form';
 import { Input } from '@/shared/ui/input';
 import { Button } from '@/shared/ui/button';
 import { Select } from '@/shared/ui/select';
+
+
 export const Calculator = () => {
+
   const [price, setPrice] = useState(null);
   const { register, handleSubmit } = useForm();
+  
   return (
     <div style={{ background: '#fff', padding: '24px', borderRadius: '16px', border: '1px solid var(--border)' }}>
       <form onSubmit={handleSubmit((d) => setPrice(Math.round(500 + (d.weight || 0) * 200)))}>

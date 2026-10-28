@@ -5,7 +5,7 @@ import { HomePage } from '@/pages/home-page';
 import { AuthPage } from '@/pages/auth-page';
 import { ProfilePage } from '@/pages/profile-page';
 import { OrdersPage } from '@/pages/orders-page';
-import { CreateParcelPage } from '@/pages/create-parcel-page'; 
+import { CreateParcelPage } from '@/pages/create-parcel-page';
 import { FaqPage } from '@/pages/faq-page';
 import { AddressBookPage } from '@/pages/address-book-page';
 import { NotificationsPage } from '@/pages/notifications-page';
@@ -21,6 +21,8 @@ import { PaymentTab } from '@/pages/profile-page/ui/payment-tab';
 import { CreateSelfOrderPage } from '@/pages/create-self-order-page';
 import { CheckoutPage } from '@/pages/checkout-page';
 import { TopUpPage } from '@/pages/top-up-page';
+import { EditProfile } from '@/features/edit-profile';
+import { ChangePassword } from '@/features/change-password';
 
 export const router = createBrowserRouter([
   {
@@ -48,6 +50,8 @@ export const router = createBrowserRouter([
               { path: 'address', element: <AddressTab /> },
               { path: 'info', element: <InfoTab /> },
               { path: 'payment', element: <PaymentTab /> },
+              { path: 'edit', element: <EditProfile /> },
+              { path: 'password', element: <ChangePassword /> },
             ]
           },
           { path: 'orders', element: <OrdersPage /> },
