@@ -1,0 +1,35 @@
+.orders-tabs { display: flex; gap: 32px; border-bottom: 1px solid var(--border); }
+.orders-tabs button { padding: 12px 0; font-size: 16px; color: var(--text-muted); border-bottom: 2px solid transparent; font-weight: 500; }
+.orders-tabs button.active { color: var(--primary-green); border-bottom-color: var(--primary-green); font-weight: 600; }
+
+.orders-filters { display: flex; gap: 12px; align-items: center; }
+.search-input { display: flex; align-items: center; background: #fff; border: 1px solid var(--border); padding: 12px 16px; border-radius: 8px; flex: 1; }
+.search-input input { border: none; outline: none; flex: 1; font-size: 14px; }
+
+.create-order-wrapper { position: relative; }
+.create-menu { position: absolute; top: 100%; right: 0; margin-top: 8px; background: #fff; border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); z-index: 10; min-width: 200px; overflow: hidden;}
+.create-menu a { display: block; padding: 12px 20px; font-size: 14px; transition: 0.2s; }
+.create-menu a:hover { background: #F5F7FA; color: var(--primary-green); }
+
+.table-wrapper { background: #fff; border-radius: 16px; border: 1px solid var(--border); overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th { padding: 16px; background: #F5F7FA; color: var(--text-muted); font-weight: 500; font-size: 13px; white-space: nowrap; }
+td { padding: 16px; font-size: 14px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+.order-row:last-child td { border-bottom: none; }
+.order-row:hover { background: #F9FAFB; }
+.status-badge { padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+.bg-yellow-100 { background: #FEF3C7; } .text-yellow-700 { color: #B45309; }
+.bg-green-100 { background: #D1FAE5; } .text-green-700 { color: #047857; }
+.bg-blue-100 { background: #DBEAFE; } .text-blue-700 { color: #1D4ED8; }
+.actions-cell { display: flex; gap: 8px; }
+.icon-btn { padding: 8px; border-radius: 8px; border: 1px solid var(--border); background: #fff; color: var(--text-muted); }
+.icon-btn:hover { color: var(--primary-blue); border-color: var(--primary-blue); }
+
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 20px;}
+.modal-content { background: #fff; padding: 32px; border-radius: 16px; width: 100%; max-width: 450px; }
+.pay-methods { display: flex; flex-direction: column; gap: 12px; }
+.pay-method { display: flex; align-items: center; gap: 16px; padding: 16px; border: 2px solid var(--border); border-radius: 12px; cursor: pointer; transition: 0.2s;}
+.pay-method:hover { border-color: var(--primary-blue); }
+.pay-method input { width: 18px; height: 18px; accent-color: var(--primary-blue); }
+.pay-logo { width: 50px; height: 32px; display: flex; align-items: center; justify-content: center; }
+.pay-logo img { max-width: 100%; max-height: 100%; }

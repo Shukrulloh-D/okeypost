@@ -1,16 +1,32 @@
-# React + Vite
+# OkeyPost - Сервис доставки из Великобритании
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Многостраничное SPA (Single Page Application) для сервиса доставки товаров. 
+Проект написан на современном стеке с использованием архитектуры FSD (Feature-Sliced Design).
 
-Currently, two official plugins are available:
+## 🛠 Стек технологий:
+- **React 18** (Функциональные компоненты, Хуки)
+- **React Router v6** (Маршрутизация и защищенные роуты)
+- **Zustand** (Глобальное управление состоянием)
+- **React Hook Form + Zod** (Работа с формами и валидация)
+- **Vanilla CSS** (Стилизация, Flexbox, Grid)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Как запустить:
+1. Установить зависимости: `npm install`
+2. Запустить сервер: `npm run dev`
+3. Открыть в браузере: `http://localhost:5173`
 
-## React Compiler
+## 📂 Архитектура (FSD):
+Проект разделен на слои для удобства поддержки и масштабирования:
+- `app` — инициализация приложения, роутинг, глобальные стили и лейауты.
+- `pages` — страницы приложения (Главная, Личный кабинет, Заказы и т.д.).
+- `widgets` — крупные независимые блоки (Шапка, Подвал, Сайдбар).
+- `features` — бизнес-логика и действия пользователя (Формы, Калькулятор).
+- `entities` — компоненты бизнес-сущностей (Карточка заказа, Уведомление).
+- `shared` — переиспользуемый фундамент (UI-кит, моки, глобальный стейт).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Реализованный функционал:
+- Защищенные маршруты (без входа в систему не попасть в кабинет).
+- Валидация форм с выводом ошибок.
+- Динамическая фильтрация и поиск.
+- Корзина/заказы с модальными окнами оплаты.
+- Адаптивная верстка (мобильная, планшетная, десктопная).

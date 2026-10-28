@@ -11,6 +11,7 @@ export const mockDeliveryOptions = [
 export const mockReviews = [
   { id: 1, name: 'NIKOLAY S', stars: 5, text: 'Ваша доставка самая быстрая и дешёвая!!!', date: '16 Ноября 2021', city: 'Санкт-Петербург', img: '/images/reviews/1.png' },
   { id: 2, name: 'DMITRIY D', stars: 5, text: 'Пуховик Levi\'s с eBay. Всё приехало быстро и целым.', date: '16 Ноября 2021', city: 'Москва', img: '/images/reviews/2.png' },
+   { id: 3, name: 'DMITRIY D', stars: 5, text: 'Пуховик Levi\'s с eBay. Всё приехало быстро и целым.', date: '16 Ноября 2021', city: 'Москва', img: '/images/reviews/3.png' }, { id: 4, name: 'DMITRIY D', stars: 5, text: 'Пуховик Levi\'s с eBay. Всё приехало быстро и целым.', date: '16 Ноября 2021', city: 'Москва', img: '/images/reviews/4.png' },
 ];
 // 25 магазинов с путями к иконкам
 export const mockStores = Array.from({ length: 25 }).map((_, i) => ({ id: i + 1, name: `Store ${i + 1}`, img: `/images/stores/store${i + 1}.png` }));

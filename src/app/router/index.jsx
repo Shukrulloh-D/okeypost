@@ -18,6 +18,9 @@ import { SalesPage } from '@/pages/sales-page';
 import { AddressTab } from '@/pages/profile-page/ui/address-tab';
 import { InfoTab } from '@/pages/profile-page/ui/info-tab';
 import { PaymentTab } from '@/pages/profile-page/ui/payment-tab';
+import { CreateSelfOrderPage } from '@/pages/create-self-order-page';
+import { CheckoutPage } from '@/pages/checkout-page';
+import { TopUpPage } from '@/pages/top-up-page';
 
 export const router = createBrowserRouter([
   {
@@ -48,9 +51,12 @@ export const router = createBrowserRouter([
             ]
           },
           { path: 'orders', element: <OrdersPage /> },
+          { path: 'orders/create-self', element: <CreateSelfOrderPage /> },
+          { path: 'orders/checkout', element: <CheckoutPage /> },
           { path: 'create-parcel', element: <CreateParcelPage /> },
           { path: 'address-book', element: <AddressBookPage /> },
           { path: 'notifications', element: <NotificationsPage /> },
+          { path: 'top-up', element: <TopUpPage /> },
         ]
       }
     ]
