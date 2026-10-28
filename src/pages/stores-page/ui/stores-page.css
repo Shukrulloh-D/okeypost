@@ -1,0 +1,8 @@
+.stores-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; }
+.store-card { background: #fff; height: 120px; border-radius: 16px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); transition: 0.2s; cursor: pointer; }
+.store-card:hover { border-color: var(--primary-blue); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.store-logo { max-width: 80%; max-height: 60px; object-fit: contain; }
+.store-fallback { font-weight: 700; color: #ccc; }
+.cta-bottom { padding: 40px; border-radius: 24px; display: flex; justify-content: space-between; align-items: center; }
+@media(max-width: 1024px) { .stores-grid { grid-template-columns: repeat(3, 1fr); } .cta-bottom { flex-direction: column; gap: 24px; text-align: center; } }
+@media(max-width: 768px) { .stores-grid { grid-template-columns: repeat(2, 1fr); } }

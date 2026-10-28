@@ -1,0 +1,9 @@
+.bonus-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 48px; }
+.bonus-card { background: #fff; padding: 32px; border-radius: 16px; border: 1px solid var(--border); display: flex; gap: 20px; }
+.bonus-icon { width: 48px; height: 48px; object-fit: contain; }
+.bonus-card h3 { font-size: 18px; margin-bottom: 12px; }
+.cta-banner { padding: 60px; border-radius: 24px; display: flex; align-items: center; gap: 60px; }
+.cta-banner h2 { color: #fff; font-size: 32px; }
+.cta-banner p { color: rgba(255,255,255,0.8); }
+.cta-img { height: 200px; }
+@media(max-width: 992px) { .bonus-grid { grid-template-columns: 1fr; } .cta-banner { flex-direction: column; text-align: center;} }
