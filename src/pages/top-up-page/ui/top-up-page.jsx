@@ -24,7 +24,7 @@ export default function TopUpPage() {
             <button key={v} type="button" onClick={() => setAmount(String(v))} className="btn btn-outline" style={{padding: '8px 16px', fontSize: 13}}>{v} ₽</button>
           ))}
         </div>
-
+ 
         <h3 className="text-lg font-bold mt-8 mb-4">Способ оплаты:</h3>
         <div className="flex flex-col gap-3">
           <label className={`pay-method-option ${method === 'card' ? 'selected' : ''}`} onClick={() => setMethod('card')}>

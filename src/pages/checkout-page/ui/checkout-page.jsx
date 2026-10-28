@@ -7,7 +7,7 @@ import { ArrowLeft, Plus, Upload, Save } from 'lucide-react';
 export default function CheckoutPage() {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => { alert('Заказ оформлен!'); };
-
+ 
   return (
     <div>
       <Link to="/orders" className="flex items-center gap-2 text-muted mb-6 text-sm hover:text-primary-blue">

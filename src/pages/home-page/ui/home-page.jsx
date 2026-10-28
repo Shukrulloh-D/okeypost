@@ -80,7 +80,7 @@ export default function HomePage() {
              </div>
           ))}
         </div>
-      </div>
+      </div> 
 
       <div className="container mt-8">
         <div className="tour-block bg-blue-gradient">

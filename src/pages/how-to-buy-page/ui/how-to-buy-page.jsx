@@ -9,7 +9,7 @@ export default function HowToBuyPage() {
     { id: 4, title: 'ОПЛАЧИВАЕТЕ ДОСТАВКУ', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.', img: '/images/steps/step4.png' },
     { id: 5, title: 'ПОЛУЧАЕТЕ ПОСЫЛКУ', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.', img: '/images/steps/step5.png' },
   ];
-
+ 
   return (
     <div className="container page-wrapper">
       <div className="bg-blue-gradient mb-8" style={{ padding: '40px' }}>

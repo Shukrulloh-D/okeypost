@@ -47,7 +47,7 @@ export default function PricesPage() {
          <div className="grid-cell"><span>Дополнительная упаковка</span><b>£3.00</b></div>
          <div className="grid-cell"><span>Упаковка хрупких предметов</span><b>£10.00</b></div>
       </div>
-
+ 
       <div className="operator-block bg-blue-gradient">
         <img src="/images/operator.png" style={{height: 200}} onError={(e)=>e.target.style.display='none'}/>
         <div>

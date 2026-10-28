@@ -5,7 +5,7 @@ import { HomePage } from '@/pages/home-page';
 import { AuthPage } from '@/pages/auth-page';
 import { ProfilePage } from '@/pages/profile-page';
 import { OrdersPage } from '@/pages/orders-page';
-import { CreateParcelPage } from '@/pages/create-parcel-page';
+import { CreateParcelPage } from '@/pages/create-parcel-page'; 
 import { FaqPage } from '@/pages/faq-page';
 import { AddressBookPage } from '@/pages/address-book-page';
 import { NotificationsPage } from '@/pages/notifications-page';

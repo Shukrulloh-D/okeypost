@@ -7,7 +7,7 @@ import { ArrowLeft } from 'lucide-react';
 export default function CreateSelfOrderPage() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = (data) => { alert('Заказ сохранен: ' + data.track); };
-
+ 
   return (
     <div>
       <Link to="/orders" className="flex items-center gap-2 text-muted mb-6 text-sm hover:text-primary-blue">

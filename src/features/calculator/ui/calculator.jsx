@@ -22,3 +22,4 @@ export const Calculator = () => {
     </div>
   );
 };
+ 

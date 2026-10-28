@@ -6,3 +6,4 @@ export default function OrderRow({ order }) {
     </tr>
   );
 }
+ 

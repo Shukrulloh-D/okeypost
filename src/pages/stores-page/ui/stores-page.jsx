@@ -22,6 +22,6 @@ export default function StoresPage() {
           <img src="/images/icons/telegram.png" style={{width: 40}} onError={(e)=>e.target.style.display='none'}/>
         </div>
       </div>
-    </div>
+    </div> 
   );
 }

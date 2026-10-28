@@ -17,3 +17,4 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .text-muted { color: var(--text-muted); font-size: 15px; }
 .bg-blue-gradient { background: linear-gradient(90deg, #5B52A3, #40B8EA); color: #fff; border-radius: 24px; }
 .mb-4 { margin-bottom: 16px; } .mb-8 { margin-bottom: 32px; } .mt-4 { margin-top: 16px; } .mt-8 { margin-top: 32px; }
+ 

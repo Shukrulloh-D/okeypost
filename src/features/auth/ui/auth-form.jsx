@@ -23,4 +23,4 @@ export const AuthForm = ({ isRegister }) => {
       </div>
     </form>
   );
-};
+}; 

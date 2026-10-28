@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { mockFaq } from '@/shared/mock/data';
 import { Search, ChevronDown } from 'lucide-react';
 import './faq-page.css';
-
+ 
 export default function FaqPage() {
   const [open, setOpen] = useState(null);
   return (

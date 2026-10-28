@@ -8,3 +8,4 @@
 .how-step p { font-size: 14px; line-height: 1.6;}
 .sticky-illustration { position: sticky; top: 100px; }
 @media(max-width: 992px) { .how-to-grid { grid-template-columns: 1fr; } .sticky-illustration { display: none; } }
+ 

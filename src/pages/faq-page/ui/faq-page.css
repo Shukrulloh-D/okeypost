@@ -10,3 +10,4 @@
 .faq-a { padding: 0 24px 24px; color: var(--text-muted); line-height: 1.6; }
 .cta-bottom { padding: 40px; border-radius: 24px; display: flex; justify-content: space-between; align-items: center; }
 @media(max-width: 768px) { .cta-bottom { flex-direction: column; gap: 24px; text-align: center; } }
+ 

@@ -26,7 +26,7 @@ export default function SalesPage() {
           </div>
         ))}
       </div>
-
+ 
       <div className="bg-blue-gradient mt-8 cta-bottom">
         <h2>Остались вопросы? Спросите нас в соцсетях!</h2>
         <div style={{display:'flex', gap: 16}}>

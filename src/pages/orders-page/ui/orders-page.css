@@ -24,7 +24,7 @@ td { padding: 16px; font-size: 14px; border-bottom: 1px solid var(--border); whi
 .actions-cell { display: flex; gap: 8px; }
 .icon-btn { padding: 8px; border-radius: 8px; border: 1px solid var(--border); background: #fff; color: var(--text-muted); }
 .icon-btn:hover { color: var(--primary-blue); border-color: var(--primary-blue); }
-
+ 
 .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 20px;}
 .modal-content { background: #fff; padding: 32px; border-radius: 16px; width: 100%; max-width: 450px; }
 .pay-methods { display: flex; flex-direction: column; gap: 12px; }

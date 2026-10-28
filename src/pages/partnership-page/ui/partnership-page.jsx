@@ -22,7 +22,7 @@ export default function PartnershipPage() {
           </div>
         ))}
       </div>
-
+ 
       <div className="bg-blue-gradient cta-banner">
         <img src="/images/bonus-illustration.png" className="cta-img" onError={(e)=>e.target.style.display='none'}/>
         <div>

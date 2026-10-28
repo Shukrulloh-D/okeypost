@@ -19,4 +19,4 @@ export const EditProfile = () => {
       <Button type="submit" className="mt-4">Сохранить</Button>
     </form>
   );
-};
+}; 
