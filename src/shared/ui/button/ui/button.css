@@ -1,0 +1,4 @@
+.btn { padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 14px; transition: 0.2s; display: inline-flex; justify-content: center; align-items: center; gap: 8px; }
+.btn-primary { background: var(--primary-green); color: #fff; }
+.btn-outline { border: 1px solid var(--primary-blue); color: var(--primary-blue); background: transparent; }
+.btn-blue { background: var(--primary-blue); color: #fff; }

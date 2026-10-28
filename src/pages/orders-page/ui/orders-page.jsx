@@ -1,0 +1,3 @@
+import { OrderRow } from '@/entities/order-row';
+import { mockOrders } from '@/shared/mock/data';
+export default function OrdersPage() { return <div className="container page-wrapper"><h1 className="title-h1 mb-8">Заказы</h1><div style={{background:'#fff', borderRadius:16, border:'1px solid var(--border)'}}><table style={{width:'100%', borderCollapse:'collapse'}}><thead><tr style={{background:'#F5F7FA'}}><th style={{padding:16}}>Заказ</th><th>Дата</th><th>Трек</th><th>Сумма</th><th>Статус</th></tr></thead><tbody>{mockOrders.map(o=><OrderRow key={o.id} order={o}/>)}</tbody></table></div></div>; }

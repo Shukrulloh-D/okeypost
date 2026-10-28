@@ -1,0 +1,7 @@
+.footer { background: #fff; border-top: 1px solid var(--border); padding: 60px 0 20px; margin-top: 80px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-grid h4 { margin-bottom: 20px; font-size: 16px; font-weight: 600; }
+.footer-grid a { display: block; color: var(--text-muted); margin-bottom: 12px; font-size: 14px; transition: 0.2s;}
+.footer-grid a:hover { color: var(--primary-blue); }
+.footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; text-align: center; color: var(--text-muted); font-size: 12px;}
+@media (max-width: 992px) { .footer-grid { grid-template-columns: 1fr 1fr; } }

@@ -1,0 +1,16 @@
+.hero-banner { background: linear-gradient(135deg, #5B52A3, #40B8EA); border-radius: 36px; padding: 80px; color: #fff; display: flex; justify-content: space-between; align-items: center; min-height: 500px; }
+.hero-text h1 { font-size: 56px; line-height: 1.1; font-weight: 700; margin-bottom: 24px; }
+.hero-img img { max-width: 450px; }
+.category-strip { display: flex; justify-content: space-between; background: #fff; padding: 32px; border-radius: 24px; border: 1px solid var(--border); }
+.category-item { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.price-compare-card { display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 60px; border-radius: 36px; border: 1px solid var(--border); }
+.compare-center { width: 300px; height: 300px; background: #F5F7FA; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.compare-center img { max-width: 110%; }
+.price-box { display: flex; align-items: center; gap: 16px; background: #F5F7FA; padding: 16px 24px; border-radius: 16px; width: fit-content; }
+.benefits-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.benefit-card { background: #fff; padding: 32px; border-radius: 24px; display: flex; gap: 20px; border: 1px solid var(--border); }
+.delivery-list { display: flex; flex-direction: column; gap: 16px; }
+.delivery-row { display: flex; align-items: center; background: #fff; padding: 24px 32px; border-radius: 20px; border: 1px solid var(--border); }
+.steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+.step-circle { width: 48px; height: 48px; background: var(--primary-blue); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 24px; margin: 16px 0; }
+@media (max-width: 1024px) { .hero-banner { flex-direction: column; } .benefits-grid, .steps-grid { grid-template-columns: 1fr 1fr; } }
